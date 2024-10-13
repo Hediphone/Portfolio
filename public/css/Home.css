@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
+
+body {
+    background-color: darkslategrey;
+    color: rgba(255, 255, 255, 0.767);
+    font-family: Inter;
+    margin: 0px;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.home {
+    overflow-y: hidden;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+nav {
+    padding: 15px;
+    height: 40px;
+    background-color: rgba(41, 28, 28, 0.833);
+    font-size: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+    padding: 0px;
+    margin: 8px 0px;
+}
+
+nav li {
+    margin-left: 18px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.767);
+    padding: 3px 15px;
+}
+
+nav a:hover {
+    border-bottom: solid rgba(255, 255, 255, 0.767);
+    border-top: solid rgba(255, 255, 255, 0.767);
+}
+
+#Banner.container {
+    background-image: url(images/background.jpg);
+    height: 640px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-bottom: solid;
+    border-top: solid;
+}
+
+.banner_name {
+    font-size: 50px;
+    color: rgba(180, 243, 243, 0.9);
+    font-weight:1000;
+    font-family: Poppins;
+    text-align: center;
+    margin: 0px 0px 0px auto;
+    width: 65%;
+}
+
+.banner_profession {
+    font-size: 20px;
+    text-align: center;
+    margin: 0px 0px 0px auto;
+    width: 60%;
+}
+
+.banner_description {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.banner_img {
+    width: 650px;
+    height: 640px;
+    margin-left: -100px;
+}
+
+.icons {
+    width: 50px;
+    height: 30px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+}
+
+.icons:hover {
+    transform: scale(1.1);
+}
+
+#Contact p {
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+#Contact img {
+    width: 20px;
+    height: 10px;
+    margin-top: 6px;
+}
+
+#Contact.container {
+    display: flex;
+}
+
+#Links.container {
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: Montserrat;
+    font-size: 30px;
+    text-align: center;
+    background-color: rgba(95, 158, 160, 0.547);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 50px auto 50px;
+    width: 60%;
+}
+
+.flex_container {
+    display: flex;
+    width: 60%;
+    align-items: center;
+    margin: auto;
+    height: auto;
+}

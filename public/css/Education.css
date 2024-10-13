@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    padding: 20px 60px;
+    border: solid;
+}
+
+th {
+    font-size: 18px;
+    font-weight: 900;
+    background-color: rgba(81, 141, 160, 0.6);
+    border: solid white;
+    border-width: 1px;
+} 
+
+td {
+    border-width: 0px 1px 0px 0px;;
+}
