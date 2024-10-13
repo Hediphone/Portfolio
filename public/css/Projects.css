@@ -5,13 +5,21 @@
 
 #Projects.container {
     height: auto;
-    width: 60%;
+    width: 90%;
     margin: auto;
     justify-content: space-evenly;
     text-align: center;
     display: flex;
     background-color: rgba(0, 0, 0, 0.323);
-    padding: 25px 15px 15px;
+    padding: 25px 15px;
+}
+
+h2 {
+    font-family: Poppins;
+    font-size: 18px;
+    /* color: rgba(180, 243, 243, 0.6); */
+    font: 500;
+    margin-top: 0px;
 }
 
 .projects_img {

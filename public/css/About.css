@@ -1,3 +1,7 @@
+.about {
+        height: auto;
+}
+
 #AboutMe_description.container {
     background-color: rgba(0, 0, 0, 0.323);
     border-radius: 5px;
@@ -17,10 +21,11 @@
 
 .img_background {
     width: 300px;
-    height: 440px;
+    height: 415px;
     border-radius: 5px;
     border-style:double;
     background-image: url(images/background.jpg);
+    background: linear-gradient(to right, #00695c, #00897b, #26a69a);
     margin-top: 30px;
     margin: auto;
     overflow: hidden;
@@ -107,11 +112,6 @@ h2 {
     padding: 5px 0px;
 } 
 
-#Hobbies h1 {
-    width: 30%;
-    margin: 30px 0px;
-}
-
 h3 {
     font-family: Poppins;
     font-size: 20px;
@@ -141,4 +141,39 @@ h3 {
 
 #Hobbies button:hover {
     cursor: pointer;
+}
+
+#Education.container {
+    margin-top: 80px;
+    width: 60%;
+}
+
+#Education .container {
+    padding: 0px;
+}
+
+table {
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid white;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+th, td {
+    padding: 20px 60px;
+    border: solid;
+}
+
+th {
+    font-size: 18px;
+    font-weight: 900;
+    background-color: rgba(81, 141, 160, 0.6);
+    border: solid white;
+    border-width: 1px;
+} 
+
+td {
+    border-width: 0px 1px 0px 0px;;
 }

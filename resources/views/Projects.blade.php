@@ -14,7 +14,7 @@
 
     <div id="Projects" class="container">
         <div class="myProjects">
-            <h3>Figma</h3>
+            <h2>Figma</h2>
             <img id="Figma" class="projects_img" src="images/Login_Page.jpeg" alt="Login Page">
             <p id="FigmaProjectName">Login Page</p>
             <button type="button"
@@ -28,7 +28,7 @@
         </div>
 
         <div class="myProjects">
-            <h3>Java (Netbeans)</h3>
+            <h2>Java (Netbeans)</h2>
             <img id="Java" class="projects_img" src="images/String_Operations.jpeg" alt="String Operations">
             <p id="JavaProjectName">String Operations</p>
             <button type="button"
@@ -42,7 +42,21 @@
         </div>
 
         <div class="myProjects">
-            <h3>HTML and CSS</h3>
+            <h2>HTML and CSS</h2>
+            <img id="HTML" class="projects_img" src="images/Website_Login.jpeg" alt="Website Login Page">
+            <p id="HTMLProjectName">Website Login Page</p>
+            <button type="button"
+                onclick="document.getElementById('HTML').src='images/Website_Login.jpeg'; document.getElementById('HTMLProjectName').innerHTML = 'Website Login Page'">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button type="button"
+                onclick="document.getElementById('HTML').src='images/Portfolio.png'; document.getElementById('HTMLProjectName').innerHTML = 'Personal Portfolio'">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <div class="myProjects">
+            <h2>HTML and CSS</h2>
             <img id="HTML" class="projects_img" src="images/Website_Login.jpeg" alt="Website Login Page">
             <p id="HTMLProjectName">Website Login Page</p>
             <button type="button"

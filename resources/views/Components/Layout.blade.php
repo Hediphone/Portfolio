@@ -18,7 +18,6 @@
                 <ul>
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('/About') }}">About Me</a></li>
-                    <li><a href="{{ url('/Education') }}">Education</a></li>
                     <li><a href="{{ url('/Projects') }}">Projects</a></li>
                 </ul>
             </nav>
