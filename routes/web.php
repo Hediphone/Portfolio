@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
+use App\Http\Middleware\CheckAge; // Import CheckAge middleware
+use App\Http\Middleware\LogRequests; // Import LogRequests middleware
 
 // Route for Landing Page
 Route::get('/', function () {
@@ -65,15 +68,15 @@ Route::get('/Guest', function () {
 
 // Route to handle when access is denied
 Route::get('/Access-denied', function () {
-    // Get the username from the session
-    $username = Session::get('name', 'Guest');
+    // Get the name from the session
+    $name = Session::get('name', 'Guest');
 
-    // Clear the username and age from the session
+    // Clear the name and age from the session
     Session::forget('name');
+    Session::forget('age');
 
     return view('Access-denied'); 
 });
-
 // Route to handle the form submission of age
 Route::post('/verify-age', function () {
     // Get the 'age' from the request input
@@ -82,10 +85,19 @@ Route::post('/verify-age', function () {
     // Store the age in session
     Session::put('age', $age);
 
-    // You can also do any age validation here if required
-    if ($age >= 18) {
-        return redirect('/Projects'); 
-    } else {
-        return redirect('/Access-denied'); 
-    }
+    return redirect('/Projects');
+});
+
+// Group routes that require age validation and logging
+Route::middleware([LogRequests::class, CheckAge::class])->group(function () {
+    Route::get('/Projects', function () {
+        // Get the name from the session
+        $name = Session::get('name', 'Guest');
+    
+        // Retrieve age and verification status
+        $age = Session::get('age');
+    
+        // Return the user view with the name and verification status
+        return view('Projects', ['name' => $name, 'age' => $age]);
+    });
 });
