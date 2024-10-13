@@ -14,6 +14,7 @@
 
         <div id="Contact" class="container">
             <form action="">
+                @csrf
                 <div class="form-group">
                     <input type="text" name="name" id="name" class="form-input" placeholder="Enter your name" required>
                 </div>

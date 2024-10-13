@@ -1,0 +1,78 @@
+* {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Poppins;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.323);
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: auto;
+    height: auto;
+    max-width: 300px;
+}
+
+.form-group input {
+    width: auto;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #26a69a;
+    outline: none;
+}
+
+.form-actions button {
+    background: linear-gradient(to right, #00695c, #00897b, #26a69a);
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-actions button:hover {
+    background-color: #072E33;
+}
+
+.link-container {
+    margin-top: 20px;
+}
+
+.link-container p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.button-link {
+    color: #26a69a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.button-link:hover {
+    color: #072E33;
+}
