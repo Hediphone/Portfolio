@@ -12,6 +12,7 @@
     </head>
 
 <body class="@yield('body-class')">
+    @if($title !== 'Welcome') 
     <header>
         <div class="header-container">
             <nav>
@@ -19,10 +20,12 @@
                     <li><a href="{{ url('/') }}">Home</a></li>
                     <li><a href="{{ url('/About') }}">About Me</a></li>
                     <li><a href="{{ url('/Projects') }}">Projects</a></li>
+                    <li><a href="{{ url('/Contact') }}">Contact Me</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+    @endif
 
     <main>
         @yield('content')
@@ -30,5 +33,6 @@
 
     @stack('scripts')
 </body>
+
 
 </html>

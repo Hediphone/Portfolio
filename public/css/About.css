@@ -103,10 +103,10 @@ td {
 }
 
 h2 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
-    width: 97%;
-    margin: 50px auto 30px;
+    width: 100%;
+    margin: 95px auto 40px;
     border-top: solid  rgba(255, 255, 255, 0.767);
     border-bottom: solid  rgba(255, 255, 255, 0.767);
     padding: 5px 0px;

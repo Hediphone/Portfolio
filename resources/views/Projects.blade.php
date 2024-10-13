@@ -56,15 +56,15 @@
         </div>
 
         <div class="myProjects">
-            <h2>HTML and CSS</h2>
-            <img id="HTML" class="projects_img" src="images/Website_Login.jpeg" alt="Website Login Page">
-            <p id="HTMLProjectName">Website Login Page</p>
+            <h2>Laravel</h2>
+            <img id="Laravel" class="projects_img" src="images/Jet Gaming Hub.png" alt="Jet Gaminh Hub Website">
+            <p id="LaravelProjectName">Jet's Gaming Hub Website</p>
             <button type="button"
-                onclick="document.getElementById('HTML').src='images/Website_Login.jpeg'; document.getElementById('HTMLProjectName').innerHTML = 'Website Login Page'">
+                onclick="document.getElementById('Laravel').src='images/Jet Gaming Hub.png'; document.getElementById('LaravelProjectName').innerHTML = 'Jet Gaming Hub'">
                 <i class="fas fa-chevron-left"></i>
             </button>
             <button type="button"
-                onclick="document.getElementById('HTML').src='images/Portfolio.png'; document.getElementById('HTMLProjectName').innerHTML = 'Personal Portfolio'">
+                onclick="document.getElementById('Laravel').src='images/Laiza First Laravel Project.png'; document.getElementById('LaravelProjectName').innerHTML = 'Personal Website'">
                 <i class="fas fa-chevron-right"></i>
             </button>
         </div>
