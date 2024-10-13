@@ -1,7 +1,7 @@
 @extends('Components.layout')
 
 @php
-    $title = 'LandingPage';
+    $title = 'Landing Page';
 @endphp
 
 @push('styles')

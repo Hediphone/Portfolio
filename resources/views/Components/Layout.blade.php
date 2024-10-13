@@ -12,14 +12,14 @@
     </head>
 
 <body class="@yield('body-class')">
-    @if($title !== 'LandingPage' && $title !== 'Welcome') 
+    @if($title !== 'Landing Page' && $title !== 'Welcome' && $title !== 'Verify Age') 
     <header>
         <div class="header-container">
             <nav>
                 <ul>
                     <li><a href="{{ url('/Home') }}">Home</a></li>
                     <li><a href="{{ url('/About') }}">About Me</a></li>
-                    <li><a href="{{ url('/Projects') }}">Projects</a></li>
+                    <li><a href="{{ url('/Verify') }}">Projects</a></li>
                     <li><a href="{{ url('/Contact') }}">Contact Me</a></li>
                 </ul>
             </nav>

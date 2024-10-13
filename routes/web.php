@@ -49,6 +49,10 @@ Route::get('/Contact', function () {
     return view('Contact');
 });
 
+Route::get('/Verify', function () {
+    return view('Verify');
+});
+
 // Route to handle "Continue as Guest" link
 Route::get('/Guest', function () {
     // Store 'Guest' in session
@@ -68,4 +72,20 @@ Route::get('/Access-denied', function () {
     Session::forget('name');
 
     return view('Access-denied'); 
+});
+
+// Route to handle the form submission of age
+Route::post('/verify-age', function () {
+    // Get the 'age' from the request input
+    $age = request()->input('age');
+
+    // Store the age in session
+    Session::put('age', $age);
+
+    // You can also do any age validation here if required
+    if ($age >= 18) {
+        return redirect('/Projects'); 
+    } else {
+        return redirect('/Access-denied'); 
+    }
 });
