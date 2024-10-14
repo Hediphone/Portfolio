@@ -4,17 +4,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Honk&display=swap');
 
 body {
-    background-color: darkslategrey;
+    background: linear-gradient(45deg, #072E33, #0B4A4F);
     color: rgba(255, 255, 255, 0.767);
     font-family: Inter;
     margin: 0px;
     width: 100vw;
     height: 100vh;
     overflow-x: hidden;
+    padding-top: 80px;
 }
 
 .home {
-    background: linear-gradient(to right, #00695c, #00897b, #26a69a);
     overflow-y: hidden;
 }
 
@@ -29,6 +29,10 @@ nav {
     height: 40px;
     background-color: rgba(41, 28, 28, 0.833);
     font-size: 18px;
+    position: fixed;
+    width: 100%; 
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -52,16 +56,23 @@ nav a:hover {
     border-bottom: solid rgba(255, 255, 255, 0.767);
 }
 
+.navbar {
+    transition: all 0.5s;
+}
+
+.navbar_scrolled {
+    background-color: black;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
 #Banner.container {
-    background-image: url(images/background.jpg);
-    height: 640px;
+    height: auto;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     overflow: hidden;
     align-items: center;
     border-bottom: solid;
-    border-top: solid;
 }
 
 .banner_name {
@@ -73,6 +84,7 @@ nav a:hover {
     margin: 0px 0px 0px auto;
     width: 65%;
 }
+
 
 .banner_profession {
     font-size: 20px;
@@ -88,9 +100,15 @@ nav a:hover {
     padding-left: 20px;
 }
 
+.banner_img_container {
+    width: 450px;
+    height: auto;
+    margin: auto;
+}
+
 .banner_img {
-    width: 650px;
-    height: 640px;
+    max-width: 670px;
+    height: auto;
     margin-left: -100px;
 }
 
@@ -147,4 +165,12 @@ h1 {
     align-items: center;
     margin: auto;
     height: auto;
+}
+
+
+.gradient-text {
+    background: linear-gradient(90deg, #00BFFF, #00FF7F); /* Gradient bluish-green colors */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes text transparent to show the gradient */
+    font-size: 20px; /* Adjust font size if necessary */
 }

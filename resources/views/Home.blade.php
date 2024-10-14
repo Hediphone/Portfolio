@@ -1,4 +1,4 @@
-@extends('Components.layout')
+@extends('Components.Layout')
 
 @php
     $title = 'Home';
@@ -10,22 +10,10 @@
     <div id="Banner" class="container">
         <div id="bannerName" class="container">
             <p id="Name" class="banner_name">Laiza Barias</p>
-            <p class="banner_profession"><b>Student Programmer</b></p>
+            <p class="banner_profession"><b>Student <span class="auto_type gradient-text"></span></b></p>
         </div>
 
-        <script>
-            document.getElementById('Name').addEventListener('mouseover', function () {
-                this.style.fontFamily = 'Honk';
-                this.style.fontSize = '62px';
-            });
-
-            document.getElementById('Name').addEventListener('mouseout', function () {
-                this.style.fontFamily = 'Poppins';
-                this.style.fontSize = '50px';
-            });
-        </script>
-
-        <div class="container" style="width: 420px;">
+        <div class="banner_img_container">
             <img class="banner_img" src="images/profile.png" alt="Profile Picture">
         </div>
 
@@ -65,3 +53,31 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // auto type
+            var typed = new Typed('.auto_type', {
+                strings: ["Programmer", "Programmer"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true
+            })
+            
+            const nameElement = document.getElementById('Name');
+
+            nameElement.addEventListener('mouseover', function () {
+                this.style.fontFamily = 'Honk';
+                this.style.fontSize = '62px';
+            });
+
+            nameElement.addEventListener('mouseout', function () {
+                this.style.fontFamily = 'Poppins';
+                this.style.fontSize = '50px';
+            });
+        });
+    </script>
+@endpush

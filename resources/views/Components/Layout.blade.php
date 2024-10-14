@@ -9,22 +9,22 @@
     <link href="{{ asset('css/Home.css') }}" rel="stylesheet">
     @stack('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    </head>
+</head>
 
 <body class="@yield('body-class')">
-    @if($title !== 'Landing Page' && $title !== 'Welcome' && $title !== 'Verify Age') 
-    <header>
-        <div class="header-container">
-            <nav>
-                <ul>
-                    <li><a href="{{ url('/Home') }}">Home</a></li>
-                    <li><a href="{{ url('/About') }}">About Me</a></li>
-                    <li><a href="{{ url('/Verify') }}">Projects</a></li>
-                    <li><a href="{{ url('/Contact') }}">Contact Me</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    @if($title !== 'Landing Page' && $title !== 'Welcome')
+        <header>
+            <div class="header-container">
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="{{ url('/Home') }}">Home</a></li>
+                        <li><a href="{{ url('/About') }}">About Me</a></li>
+                        <li><a href="{{ url('/Verify') }}">Projects</a></li>
+                        <li><a href="{{ url('/Contact') }}">Contact Me</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
     @endif
 
     <main>
@@ -32,6 +32,18 @@
     </main>
 
     @stack('scripts')
+
+    <script>
+        // navbar scroll
+        const navEl = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 56) {
+                navEl.classList.add('navbar_scrolled');
+            } else if (window.scrollY < 56) {
+                navEl.classList.remove('navbar_scrolled');
+            }
+        });
+    </script>
 </body>
 
 

@@ -3,18 +3,10 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-family: Poppins;
-}
-
-.wrapper {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {
+    font-family: Poppins;
     background-color: rgba(0, 0, 0, 0.323);
     padding: 50px;
     border-radius: 10px;
@@ -22,6 +14,7 @@
     width: auto;
     height: auto;
     max-width: 300px;
+    margin: 100px auto;
 }
 
 h1 {

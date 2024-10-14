@@ -1,4 +1,4 @@
-@extends('Components.layout')
+@extends('Components.Layout')
 
 @php
     $title = 'Access Denied';
@@ -9,8 +9,6 @@
 @endpush
 
 @section('content')
-    <div class="blur-background"></div>
-
     <div class="center-container">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" class="circle-x-icon">
             <circle cx="50" cy="50" r="48" class="outer-circle" />

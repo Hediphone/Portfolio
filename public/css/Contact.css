@@ -1,4 +1,7 @@
-#Contact.container {
+* {
+    overflow: hidden;
+}
+    #Contact.container {
     width: auto;
 }
 

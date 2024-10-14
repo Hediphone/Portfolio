@@ -77,6 +77,7 @@ Route::get('/Access-denied', function () {
 
     return view('Access-denied'); 
 });
+
 // Route to handle the form submission of age
 Route::post('/verify-age', function () {
     // Get the 'age' from the request input
@@ -88,16 +89,16 @@ Route::post('/verify-age', function () {
     return redirect('/Projects');
 });
 
-// Group routes that require age validation and logging
-Route::middleware([LogRequests::class, CheckAge::class])->group(function () {
+// Apply CheckAge with a minimum age of 21 for Projects
+Route::middleware([LogRequests::class, CheckAge::class . ':21'])->group(function () {
     Route::get('/Projects', function () {
         // Get the name from the session
         $name = Session::get('name', 'Guest');
     
-        // Retrieve age and verification status
+        // Retrieve age
         $age = Session::get('age');
     
-        // Return the user view with the name and verification status
+        // Return the Projects view with the name and age
         return view('Projects', ['name' => $name, 'age' => $age]);
     });
 });

@@ -1,4 +1,4 @@
-@extends('Components.layout')
+@extends('Components.Layout')
 
 @php
     $title = 'Welcome';
@@ -12,7 +12,9 @@
     <div class="wrapper">
         <div class="container">
             <h1>Welcome, <span id="typed-name"></span></h1>
-            <h2>Explore my portfolio to know more about me <br>and the projects I have completed!</h2>
+            <h2>I am Laiza Mae B. Barias, the owner of this website. 
+                <br>Explore my portfolio to know more about me 
+                <br>and the projects I have completed!</h2>
             <button onclick="window.location.href='{{ url('/Home') }}'">Go</button>
         </div>
     </div>

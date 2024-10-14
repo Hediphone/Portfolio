@@ -1,4 +1,4 @@
-@extends('Components.layout')
+@extends('Components.Layout')
 
 @php
     $title = 'Verify Age';
@@ -9,10 +9,9 @@
 @endpush
 
 @section('content')
-<div class="wrapper">
     <div class="container">
         <h1>This page is age-restricted. <br>
-            Please enter your age in order to verify if you are of age allowed to access this page.</h1>
+            Please enter your age in order to verify if you meet the age requirement.</h1>
         <form action="{{ url('/verify-age') }}" method="POST">
             @csrf
             <div class="form-group">
@@ -23,7 +22,5 @@
                 <button type="submit" class="form-button">Submit</button>
             </div>
         </form>
-
     </div>
-</div>
 @endsection

@@ -12,26 +12,25 @@ class CheckAge
     /**
      * Handle an incoming request.
      *
-     * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \Closure  $next
+     * @param  int  $minAge
+     * @return mixed
      */
-    public function handle(Request $request, Closure $next): Response
-    {
-        // Retrieve the age from the session
-        $age = Session::get('age');
+    public function handle(Request $request, Closure $next, $minAge)
+{
+    $age = Session::get('age');
 
-        if (!$age) {
-            return redirect('/Verify');
-        }
-        
-        // Check the age and set the verification status
-        if ($age < 18) {
+    // Check if the user meets the minimum age requirement
+    if ($age) {
+        if ($age < $minAge) {
             return redirect('/Access-denied');
-        } elseif ($age >= 18) {
-            Session::put('verificationStatus', 'Verified');
-        } else {
-            Session::put('verificationStatus', 'Unverified');
+        } elseif ($age >= $minAge && $request->path() !== 'Projects') {
+            return redirect('/Projects'); // Redirect to Projectsv2 if age > 21
         }
-
-        return $next($request);
     }
+
+    return $next($request); // Allow access to the next request if age is 18 or 21
+}
+
 }

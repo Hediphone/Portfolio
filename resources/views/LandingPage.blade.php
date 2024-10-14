@@ -1,4 +1,4 @@
-@extends('Components.layout')
+@extends('Components.Layout')
 
 @php
     $title = 'Landing Page';

@@ -1,5 +1,5 @@
 .about {
-        height: auto;
+    height: auto;
 }
 
 #AboutMe_description.container {
@@ -23,7 +23,7 @@
     width: 300px;
     height: 415px;
     border-radius: 5px;
-    border-style:double;
+    border-style: double;
     background-image: url(images/background.jpg);
     background: linear-gradient(to right, #00695c, #00897b, #26a69a);
     margin-top: 30px;
@@ -46,7 +46,8 @@ table {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-th, td {
+th,
+td {
     padding: 20px 60px;
     border: solid;
 }
@@ -57,10 +58,11 @@ th {
     background-color: rgba(81, 141, 160, 0.6);
     border: solid white;
     border-width: 1px;
-} 
+}
 
 td {
-    border-width: 0px 1px 0px 0px;;
+    border-width: 0px 1px 0px 0px;
+    ;
 }
 
 #Skills.container {
@@ -107,10 +109,10 @@ h2 {
     text-align: center;
     width: 100%;
     margin: 95px auto 40px;
-    border-top: solid  rgba(255, 255, 255, 0.767);
-    border-bottom: solid  rgba(255, 255, 255, 0.767);
+    border-top: solid rgba(255, 255, 255, 0.767);
+    border-bottom: solid rgba(255, 255, 255, 0.767);
     padding: 5px 0px;
-} 
+}
 
 h3 {
     font-family: Poppins;
@@ -135,7 +137,7 @@ h3 {
     margin: 15px 0px 0px;
     background-color: transparent;
     color: rgba(180, 243, 243, 0.6);
-    border: solid  rgba(180, 243, 243, 0.6);
+    border: solid rgba(180, 243, 243, 0.6);
     border-radius: 5px;
 }
 
@@ -161,7 +163,8 @@ table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 20px 60px;
     border: solid;
 }
@@ -172,8 +175,9 @@ th {
     background-color: rgba(81, 141, 160, 0.6);
     border: solid white;
     border-width: 1px;
-} 
+}
 
 td {
-    border-width: 0px 1px 0px 0px;;
+    border-width: 0px 1px 0px 0px;
+    ;
 }
