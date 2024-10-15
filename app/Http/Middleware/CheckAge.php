@@ -24,7 +24,7 @@ class CheckAge
     // Check if the user meets the minimum age requirement
     if ($age) {
         if ($age < $minAge) {
-            return redirect('/Access-denied');
+            Session::put('verification_stat', 'Not Verified');
         } else{
             Session::put('verification_stat', 'Verified');
         }

@@ -68,11 +68,7 @@ Route::get('/Guest', function () {
 
 // Route to handle when access is denied
 Route::get('/Access-denied', function () {
-    // Get the name from the session
-    $name = Session::get('name', 'Guest');
-
-    // Clear the name and age from the session
-    Session::forget('name');
+    // Clear the age and verification_stat from the session
     Session::forget('age');
     Session::forget('verification_stat');
     
