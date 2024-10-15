@@ -74,7 +74,8 @@ Route::get('/Access-denied', function () {
     // Clear the name and age from the session
     Session::forget('name');
     Session::forget('age');
-
+    Session::forget('verification_stat');
+    
     return view('Access-denied'); 
 });
 
@@ -90,15 +91,14 @@ Route::post('/verify-age', function () {
 });
 
 // Apply CheckAge with a minimum age of 21 for Projects
-Route::middleware([LogRequests::class, CheckAge::class . ':21'])->group(function () {
+Route::middleware([CheckAge::class . ':21', LogRequests::class])->group(function () {
     Route::get('/Projects', function () {
-        // Get the name from the session
+        
         $name = Session::get('name', 'Guest');
-    
-        // Retrieve age
         $age = Session::get('age');
+        $verification_stat = Session::get('verification_stat');
     
         // Return the Projects view with the name and age
-        return view('Projects', ['name' => $name, 'age' => $age]);
+        return view('Projects', ['name' => $name, 'age' => $age, 'verification_stat' => $verification_stat]);
     });
 });
