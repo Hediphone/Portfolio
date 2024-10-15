@@ -6,6 +6,10 @@
     font-family: Poppins;
 }
 
+body {
+    padding: 0px;
+}
+
 .wrapper {
     width: 100vw;
     height: 100vh;
@@ -30,7 +34,6 @@
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    margin-bottom: 30px;
     background-color: white;
     transition: border-color 0.3s ease;
 }
@@ -75,4 +78,25 @@
 
 .button-link:hover {
     color: #072E33;
+}
+
+#name_error {
+    color: rgb(250, 76, 76);
+    visibility: hidden; 
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    height: auto; 
+}
+
+#name_error.show {
+    visibility: visible; 
+}
+
+h1 {
+    margin-top: 0;
+    width: auto;
+    background: none;
+    font-size: 18px;
 }

@@ -94,7 +94,6 @@ Route::middleware([CheckAge::class . ':21', LogRequests::class])->group(function
         $age = Session::get('age');
         $verification_stat = Session::get('verification_stat');
     
-        // Return the Projects view with the name and age
         return view('Projects', ['name' => $name, 'age' => $age, 'verification_stat' => $verification_stat]);
     });
 });

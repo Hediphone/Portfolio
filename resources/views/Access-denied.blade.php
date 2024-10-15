@@ -18,7 +18,7 @@
         </svg>
 
         <h1>Access Denied</h1>
-        <p>You must be at least 18 years old to access this content.</p>
+        <p>You must be at least 21 years old to access this content.</p>
     </div>
 @endsection
     

@@ -21,7 +21,6 @@ class CheckAge
 {
     $age = Session::get('age');
 
-    // Check if the user meets the minimum age requirement
     if ($age) {
         if ($age < $minAge) {
             Session::put('verification_stat', 'Not Verified');

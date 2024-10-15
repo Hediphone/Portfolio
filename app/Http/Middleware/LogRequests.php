@@ -23,7 +23,6 @@ class LogRequests
 
         $ipAddress = $request->ip();
 
-        // Prepare log data with timestamp, HTTP method, full URL, and username
         $logData = sprintf(
             "[%s], %s, %s, Name: %s, IP: %s, Age: %s, Verification Status: %s\n",
             now()->toDateTimeString(), // Time
@@ -44,7 +43,7 @@ class LogRequests
         if ($verification_stat == 'Not Verified') {
             return redirect('/Access-denied');
         }
-        // Proceed with the next middleware/handler in the stack
+        
         return $next($request);
     }
 }
