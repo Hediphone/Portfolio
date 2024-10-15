@@ -26,11 +26,12 @@ class CheckAge
         if ($age < $minAge) {
             return redirect('/Access-denied');
         } elseif ($age >= $minAge && $request->path() !== 'Projects') {
-            return redirect('/Projects'); // Redirect to Projectsv2 if age > 21
+            Session::put('verification_stat', 'Verified');
+            return redirect('/Projects'); 
         }
     }
 
-    return $next($request); // Allow access to the next request if age is 18 or 21
+    return $next($request); 
 }
 
 }
