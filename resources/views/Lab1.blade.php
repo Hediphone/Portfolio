@@ -15,7 +15,7 @@
 
     <div id="lab1" class="Lab_Content">
         <h1>Lab 1: Setup</h1>
-
+        
         <div class="img_container">
             <img id="lab1_img" class="projects_img" src="../images/Laiza First Laravel Project.png" alt="lab1">
         </div>
@@ -41,11 +41,13 @@
                 Finally, I defined routes in the routes/web.php file, linking user requests to specific views, which
                 taught me how routing manages application flow and user interactions.
             </p>
-            <a href="{{ asset(path: '/DOCS/BARIAS_LAB1_DOCUMENTATION.pdf') }}" target="_blank">-> View PDF
-                Documentation</a>
+            <a href="{{ asset(path: '/DOCS/BARIAS_LAB1_DOCUMENTATION.pdf') }}" target="_blank">-> View PDF Documentation</a>
+            <br>
+            <a href="https://github.com/Hediphone/WebDev.git" target="_blank">-> View Repository</a>
         </div>
 
-        <div class="navigation_buttons_lab1">
+        <div class="navigation_buttons">
+            <a href="/Projects" class="back_button">Back to Projects</a>
             <a href="/Projects/Lab2" class="next_button">Next</a>
         </div>
     </div>

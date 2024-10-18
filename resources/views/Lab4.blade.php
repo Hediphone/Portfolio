@@ -41,8 +41,9 @@
                 dashboard, allowing me to test different age values to see if the middleware worked correctly.
                 This experience showed me how middleware can improve security and logging in web applications.
             </p>
-            <a href="{{ asset(path: '/DOCS/BARIAS_LAB4_DOCUMENTATION.pdf') }}" target="_blank">-> View PDF
-                Documentation</a>
+            <a href="{{ asset(path: '/DOCS/BARIAS_LAB4_DOCUMENTATION.pdf') }}" target="_blank">-> View PDF Documentation</a>
+            <br>
+            <a href="https://github.com/Jethro0329/Group2.git" target="_blank">-> View Repository</a>
         </div>
 
         <div class="navigation_buttons">
