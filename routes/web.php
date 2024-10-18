@@ -48,6 +48,7 @@ Route::get('/Projects', function () {
     return view('Projects');
 });
 
+// Parameterized route to render lab views based on the lab name
 Route::get('/Projects/{Lab}', function ($Lab) {
     return view($Lab);  
 });
