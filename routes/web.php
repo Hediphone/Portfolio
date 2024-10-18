@@ -48,6 +48,10 @@ Route::get('/Projects', function () {
     return view('Projects');
 });
 
+Route::get('/Projects/{Lab}', function ($Lab) {
+    return view($Lab);  
+});
+
 Route::get('/Contact', function () {
     return view('Contact');
 });

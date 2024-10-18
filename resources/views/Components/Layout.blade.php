@@ -31,6 +31,12 @@
         @yield('content')
     </main>
 
+    @if($title !== 'Landing Page' || $title !== 'Welcome' || $title !== 'Contact')
+        <footer>
+            <p>&copy; 2024 Laiza's Personal Portfolio. All rights reserved.</p>
+        </footer>
+    @endif
+
     @stack('scripts')
 
     <script>
